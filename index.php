@@ -27,7 +27,22 @@ var_dump($resultado);
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+
+   <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <?php foreach($resultado as $dato); ?>
+
+            <div 
+            class="alert alert-<?php echo $dato['dato'] ?> text-uppercase" role="alert">
+            <?php echo $dato ['color'] ?>
+
+            <?php echo $dato ['descripcion'] ?>
+            </div>            
+        </div>
+        </div>
+    </div>
+    
 
     <!-- Optional JavaScript; choose one of the two! -->
 
