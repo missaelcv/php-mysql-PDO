@@ -1,4 +1,4 @@
-<!-- <?php
+ <?php
 
 include_once 'conexion.php';
 
@@ -34,7 +34,10 @@ var_dump($resultado);
             <div class="col-md-6">
                 <?php foreach($resultado as $dato); ?>
 
-            <div class="alert alert-<?php echo $dato['dato'] ?> text-uppercase" role="alert">
+            <div 
+            class="alert alert-<?php echo $dato['color'] ?> text-uppercase"  
+            role="alert">
+
             <?php echo $dato ['color'] ?>
 
             <?php echo $dato ['descripcion'] ?>
