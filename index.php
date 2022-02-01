@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 include_once 'conexion.php';
 
@@ -14,6 +14,7 @@ var_dump($resultado);
 
 ?>
 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,14 +28,13 @@ var_dump($resultado);
     <title>Hello, world!</title>
   </head>
   <body>
-
-   <div class="container mt-5">
+    
+  <div class="container mt-5">
         <div class="row">
             <div class="col-md-6">
                 <?php foreach($resultado as $dato); ?>
 
-            <div 
-            class="alert alert-<?php echo $dato['dato'] ?> text-uppercase" role="alert">
+            <div class="alert alert-<?php echo $dato['dato'] ?> text-uppercase" role="alert">
             <?php echo $dato ['color'] ?>
 
             <?php echo $dato ['descripcion'] ?>
@@ -42,7 +42,6 @@ var_dump($resultado);
         </div>
         </div>
     </div>
-    
 
     <!-- Optional JavaScript; choose one of the two! -->
 

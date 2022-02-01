@@ -2,15 +2,14 @@
 
 $link = 'mysql:host=localhost;dbname=yt_colores';
 $usuario = 'root';
-$pass = 'root';
 
 try {
     
-   $pdo = new PDO($link, $usuario, $pass);
+   $pdo = new PDO($link, $usuario);
 
    echo 'Conectado';
 
-   foreach($mbd->query('SELECT * from colores') as $fila) {
+   foreach($pdo->query('SELECT * FROM `colores`') as $fila) {
     print_r($fila);
 }
 
@@ -19,3 +18,5 @@ try {
     die();
 }
 ?>
+
+
