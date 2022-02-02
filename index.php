@@ -15,9 +15,13 @@ $resultado = $gsent->fetchAll();
    $descripcion = $_POST['descripcion'];
 
    //se agrego la funcion agregar con la tabla colores de la base de datos....
-   $sql_agregar= 'INSERT INTO colores (color,descripcion) Value ?, ?';
+   $sql_agregar= 'INSERT INTO colores (color,descripcion) Value (?, ?)';
 
+  //Crear Variable para la sentencia SQL
+  $sentencia_agregar = $pdo->prepare($sql_agregar);
+  $sentencia_agregar->execute(array($color,$descripcion));
     
+  echo 'Agregado';
  }
 ?>
 
