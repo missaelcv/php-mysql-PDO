@@ -21,7 +21,7 @@ $resultado = $gsent->fetchAll();
   $sentencia_agregar = $pdo->prepare($sql_agregar);
   $sentencia_agregar->execute(array($color,$descripcion));
     
-  echo 'Agregado';
+  header('location:index.php');
  }
 ?>
 
