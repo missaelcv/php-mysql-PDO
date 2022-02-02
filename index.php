@@ -1,19 +1,17 @@
  <?php
 
 include_once 'conexion.php';
-
+//Leer 
 $sql_leer = 'SELECT * FROM colores';
-
 //Crear Variable
 $gsent = $pdo->prepare($sql_leer);
 $gsent->execute();
-
 $resultado = $gsent->fetchAll();
 
-var_dump($resultado);
+//var_dump($resultado);
 
+ //Agregar
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -34,17 +32,28 @@ var_dump($resultado);
             <div class="col-md-6">
                 <?php foreach($resultado as $dato); ?>
 
-            <div 
-            class="alert alert-<?php echo $dato['color'] ?> text-uppercase"  
+            <div class="alert alert-<?php echo $dato['color'] ?> text-uppercase"  
             role="alert">
 
             <?php echo $dato ['color'] ?>
-
+              -
             <?php echo $dato ['descripcion'] ?>
-            </div>            
-        </div>
-        </div>
-    </div>
+            </div>    
+            
+          
+
+           </div>
+                  <div class="col-md-6">
+
+                 <h2>Agregar elementos</h2>
+                  <form >
+                    <input type="text" class="form-control" name="color">
+                    <input type="text" class="form-control mt-3" name="descripcion">
+                    <button class="btn btn-primary mt-3">Agregar</button>
+                  </form>
+                </div>
+                </div>
+            </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
