@@ -35,7 +35,7 @@ $resultado = $gsent->fetchAll();
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" crossorigin="anonymous">
     <title>Hello, world!</title>
   </head>
   <body>
@@ -52,6 +52,9 @@ $resultado = $gsent->fetchAll();
             <?php echo $dato ['color'] ?>
               -
             <?php echo $dato ['descripcion'] ?>
+
+            <a href="" class="float-rigth">
+              <i class="fas fa-pencil-all"></i></a>
             </div>    
 
             <?php endforeach?>
@@ -65,7 +68,7 @@ $resultado = $gsent->fetchAll();
                   <form method="POST">
                     <input type="text" class="form-control" name="color">
                     <input type="text" class="form-control mt-3" name="descripcion">
-                    <button class="btn btn-primary mt-3">Agregar</button>
+                    <button class="btn btn-primary mt-3">Agregar</button> 
                   </form>
                 </div>
                 </div>
