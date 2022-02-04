@@ -105,8 +105,11 @@ $resultado = $gsent->fetchAll();
                  <h2>Editar elementos</h2>
                   <form method="GET" action="editar.php">
                     <input type="text" class="form-control" name="color"
-                    >
-                    <input type="text" class="form-control mt-3" name="descripcion">
+                    value= "<?php echo $resultado_unico['color'] ?>">
+                    <input type="text" class="form-control mt-3" name="descripcion"
+                    value= "<?php echo $resultado_unico['descripcion'] ?>">
+                    <input type = "hidden"  name="id"
+                    value= "<?php echo $resultado_unico['id'] ?>">
                     <button class="btn btn-primary mt-3">Agregar</button> 
                   </form>
                   <?php endif ?>
