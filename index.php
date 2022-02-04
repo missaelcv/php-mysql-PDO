@@ -23,6 +23,11 @@ $resultado = $gsent->fetchAll();
     
   header('location:index.php');
  }
+
+//  fa_custom_setup_cdn_webfont(
+//   'https://pro.fontawesome.com/releases/v5.10.0/css/all.css',
+//   'sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p'
+// );
 ?>
 
 <!doctype html>
@@ -35,8 +40,21 @@ $resultado = $gsent->fetchAll();
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" crossorigin="anonymous">
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/>
+
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"/>
+
+    <!-- <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+    integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <title>Hello, world!</title> -->
+
+    
   </head>
   <body>
     
@@ -53,8 +71,7 @@ $resultado = $gsent->fetchAll();
               -
             <?php echo $dato ['descripcion'] ?>
 
-            <a href="" class="float-rigth">
-              <i class="fas fa-pencil-all"></i></a>
+            
             </div>    
 
             <?php endforeach?>
