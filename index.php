@@ -71,7 +71,10 @@ $resultado = $gsent->fetchAll();
               -
             <?php echo $dato ['descripcion'] ?>
 
-            
+            <a href="index.php?id=<?php echo $dato['id'] ?>" 
+            class="float-rigth">
+              <i class="fas fa-pencil-alt"></i>
+            </a>
             </div>    
 
             <?php endforeach?>
