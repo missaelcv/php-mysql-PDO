@@ -24,6 +24,15 @@ $resultado = $gsent->fetchAll();
   header('location:index.php');
  }
 
+ if($_GET){
+   $id = $_GET['id'];
+   $sql_unico = 'SELECT * FROM colores Where id=?';
+    //Crear Variable
+    $gsent_unico = $pdo->prepare($sql_unico);
+    $gsent_unico->execute(array($id));
+    $resultado_unico = $gsent_unico->fetch();
+ }
+
 //  fa_custom_setup_cdn_webfont(
 //   'https://pro.fontawesome.com/releases/v5.10.0/css/all.css',
 //   'sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p'
@@ -83,13 +92,24 @@ $resultado = $gsent->fetchAll();
 
            </div>
                   <div class="col-md-6">
-
+                    <?php if(!$_GET):?>
                  <h2>Agregar elementos</h2>
                   <form method="POST">
                     <input type="text" class="form-control" name="color">
                     <input type="text" class="form-control mt-3" name="descripcion">
                     <button class="btn btn-primary mt-3">Agregar</button> 
                   </form>
+                  <?php endif ?>
+
+                  <?php if($_GET):?>
+                 <h2>Editar elementos</h2>
+                  <form method="GET" action="editar.php">
+                    <input type="text" class="form-control" name="color"
+                    >
+                    <input type="text" class="form-control mt-3" name="descripcion">
+                    <button class="btn btn-primary mt-3">Agregar</button> 
+                  </form>
+                  <?php endif ?>
                 </div>
                 </div>
             </div>
