@@ -80,8 +80,12 @@ $resultado = $gsent->fetchAll();
               -
             <?php echo $dato ['descripcion'] ?>
 
+                  <a href="eliminar.php?=id"<?php echo $dato['color'] ?> class="float-right ml-3">
+                    <i class="far fa-trash-alt"></i>
+                  </a>
+
             <a href="index.php?id=<?php echo $dato['id'] ?>" 
-            class="float-rigth">
+            class="float-right">
               <i class="fas fa-pencil-alt"></i>
             </a>
             </div>    
