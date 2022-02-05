@@ -16,12 +16,11 @@ $resultado = $gsent->fetchAll();
 
    //se agrego la funcion agregar con la tabla colores de la base de datos....
    $sql_agregar= 'INSERT INTO colores (color,descripcion) Value (?, ?)';
-
   //Crear Variable para la sentencia SQL
   $sentencia_agregar = $pdo->prepare($sql_agregar);
   $sentencia_agregar->execute(array($color,$descripcion));
     
-  header('location:index.php');
+ // header('location:index.php');
  }
 
  if($_GET){
@@ -72,27 +71,24 @@ $resultado = $gsent->fetchAll();
             <div class="col-md-6">
                 <?php foreach($resultado as $dato): ?>
 
-        <div 
-        class="alert alert-<?php echo $dato['color'] ?> text-uppercase"  
-        role="alert">
+        <div  class="alert alert-<?php echo $dato['color'] ?>
+         text-uppercase" role="alert">
 
             <?php echo $dato ['color'] ?>
-              -
+              
             <?php echo $dato ['descripcion'] ?>
 
-                  <a href="eliminar.php?=id"<?php echo $dato['color'] ?> class="float-right ml-3">
+                  <a href="eliminar.php?id=<?php echo $dato['id'] ?> "class="float-right ml-3">
                     <i class="far fa-trash-alt"></i>
                   </a>
 
-            <a href="index.php?id=<?php echo $dato['id'] ?>" 
-            class="float-right">
-              <i class="fas fa-pencil-alt"></i>
-            </a>
+                  <a href="index.php?id=<?php echo $dato['id'] ?>" class="float-right">
+                    <i class="fas fa-pencil-alt"></i>
+                  </a>
+
             </div>    
 
             <?php endforeach?>
-            
-          
 
            </div>
                   <div class="col-md-6">

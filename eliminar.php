@@ -10,4 +10,3 @@ $sentencia_eliminar->execute(array($id));
 
 header('location:index.php');
 
-?>
