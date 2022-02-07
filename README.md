@@ -4,7 +4,7 @@ php-mysql PDO
 
 <?php
 
-```###include_once 'conexion.php';```
+```###include_once 'conexion.php';´´´
 
 ###Leer 
 $sql_leer = 'SELECT * FROM colores';
