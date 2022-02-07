@@ -7,7 +7,7 @@ php-mysql PDO
 ```###include_once 'conexion.php';´´´
 
 ###Leer 
-$sql_leer = 'SELECT * FROM colores';
+```$sql_leer = 'SELECT * FROM colores';´´´
 
 ###Crear Variable
 $gsent = $pdo->prepare($sql_leer);
@@ -17,9 +17,9 @@ $resultado = $gsent->fetchAll();
 var_dump($resultado);
 
 ###Agregar
- if($_POST) {
+ ```if($_POST) {
    $color = $_POST['color'];
-   $descripcion = $_POST['descripcion'];
+   $descripcion = $_POST['descripcion'];´´´
 
 ###Se agrego la funcion agregar con la tabla colores de la base de datos....
 
